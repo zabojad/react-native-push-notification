@@ -498,6 +498,7 @@ public class RNPushNotificationHelper {
     }
 
     public void cancelScheduledNotification(ReadableMap userInfo) {
+        Log.i(LOG_TAG, "cancelScheduledNotification from userInfo ");
         for (String id : scheduledNotificationsPersistence.getAll().keySet()) {
             try {
                 String notificationAttributesJson = scheduledNotificationsPersistence.getString(id, null);
